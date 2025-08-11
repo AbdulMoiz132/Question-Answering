@@ -47,11 +47,21 @@ def simple_qa_system(context: str, question: str) -> Dict:
     # Percentage questions
     if "percentage" in question_lower or "%" in question_lower:
         if "brazil" in question_lower:
-            # Extract "60%" from context
-            match = re.search(r'with (\d+)% of the rainforest', context)
-            if match:
-                answer = match.group(1) + "%"
-                confidence = 0.9
+            # Try multiple patterns for Brazil percentage
+            patterns = [
+                r'with (\d+)% of the rainforest',  # Original pattern
+                r'(\d+)% of Brazil',                # Alternative pattern
+                r'Brazil.*?(\d+)%',                 # Brazil followed by percentage
+                r'(\d+)%.*?Brazil',                 # Percentage followed by Brazil
+                r'(\d+)%'                          # Any percentage (last resort)
+            ]
+            
+            for pattern in patterns:
+                match = re.search(pattern, context)
+                if match:
+                    answer = match.group(1) + "%"
+                    confidence = 0.9
+                    break
     
     # Square kilometers questions
     elif "square kilometer" in question_lower or "km2" in question_lower:
