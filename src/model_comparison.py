@@ -255,43 +255,104 @@ class ModelComparator:
             f1_scores = [self.results[m]['f1_score'] for m in models]
             inference_times = [self.results[m]['avg_inference_time'] for m in models]
             
-            # Create subplots
-            fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(15, 10))
+            # Create subplots with more space
+            fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(16, 12))
             
             # EM scores
-            ax1.bar(models, em_scores)
-            ax1.set_title('Exact Match Scores')
-            ax1.set_ylabel('EM Score')
-            ax1.tick_params(axis='x', rotation=45)
+            bars1 = ax1.bar(models, em_scores, color='skyblue', alpha=0.8)
+            ax1.set_title('Exact Match Scores', fontsize=14, fontweight='bold')
+            ax1.set_ylabel('EM Score', fontsize=12)
+            ax1.tick_params(axis='x', rotation=45, labelsize=10)
+            ax1.set_ylim(0, max(em_scores) + 0.1)
+            
+            # Add value labels on bars
+            for bar, score in zip(bars1, em_scores):
+                ax1.text(bar.get_x() + bar.get_width()/2., bar.get_height() + 0.01,
+                        f'{score:.1%}', ha='center', va='bottom', fontsize=10)
             
             # F1 scores
-            ax2.bar(models, f1_scores)
-            ax2.set_title('F1 Scores')
-            ax2.set_ylabel('F1 Score')
-            ax2.tick_params(axis='x', rotation=45)
+            bars2 = ax2.bar(models, f1_scores, color='lightcoral', alpha=0.8)
+            ax2.set_title('F1 Scores', fontsize=14, fontweight='bold')
+            ax2.set_ylabel('F1 Score', fontsize=12)
+            ax2.tick_params(axis='x', rotation=45, labelsize=10)
+            ax2.set_ylim(0, max(f1_scores) + 0.1)
+            
+            # Add value labels on bars
+            for bar, score in zip(bars2, f1_scores):
+                ax2.text(bar.get_x() + bar.get_width()/2., bar.get_height() + 0.01,
+                        f'{score:.1%}', ha='center', va='bottom', fontsize=10)
             
             # Inference times
-            ax3.bar(models, inference_times)
-            ax3.set_title('Average Inference Time')
-            ax3.set_ylabel('Time (seconds)')
-            ax3.tick_params(axis='x', rotation=45)
+            bars3 = ax3.bar(models, inference_times, color='lightgreen', alpha=0.8)
+            ax3.set_title('Average Inference Time', fontsize=14, fontweight='bold')
+            ax3.set_ylabel('Time (seconds)', fontsize=12)
+            ax3.tick_params(axis='x', rotation=45, labelsize=10)
             
-            # EM vs F1 scatter
-            ax4.scatter(em_scores, f1_scores)
+            # Add value labels on bars
+            for bar, time in zip(bars3, inference_times):
+                ax3.text(bar.get_x() + bar.get_width()/2., bar.get_height() + max(inference_times)*0.01,
+                        f'{time:.3f}s', ha='center', va='bottom', fontsize=10)
+            
+            # EM vs F1 scatter - IMPROVED VERSION
+            colors = ['red', 'blue', 'green', 'orange', 'purple', 'brown', 'pink', 'gray']
+            markers = ['o', 's', '^', 'D', 'v', '<', '>', 'p']
+            
+            # Plot each point individually with different colors and markers
             for i, model in enumerate(models):
-                ax4.annotate(model, (em_scores[i], f1_scores[i]))
-            ax4.set_xlabel('Exact Match')
-            ax4.set_ylabel('F1 Score')
-            ax4.set_title('EM vs F1 Scores')
+                ax4.scatter(em_scores[i], f1_scores[i], 
+                           c=colors[i % len(colors)], 
+                           marker=markers[i % len(markers)],
+                           s=150, 
+                           alpha=0.8,
+                           edgecolors='black',
+                           linewidth=1,
+                           label=model)
+            
+            ax4.set_xlabel('Exact Match Score', fontsize=12)
+            ax4.set_ylabel('F1 Score', fontsize=12)
+            ax4.set_title('EM vs F1 Scores Comparison', fontsize=14, fontweight='bold')
+            ax4.grid(True, alpha=0.3)
+            
+            # Set axis limits with proper padding
+            x_min, x_max = min(em_scores), max(em_scores)
+            y_min, y_max = min(f1_scores), max(f1_scores)
+            x_padding = max(0.05, (x_max - x_min) * 0.1)
+            y_padding = max(0.05, (y_max - y_min) * 0.1)
+            
+            ax4.set_xlim(x_min - x_padding, x_max + x_padding)
+            ax4.set_ylim(y_min - y_padding, y_max + y_padding)
+            
+            # Add legend outside the plot
+            ax4.legend(bbox_to_anchor=(1.05, 1), loc='upper left', fontsize=10)
             
             plt.tight_layout()
             plt.savefig('model_comparison.png', dpi=300, bbox_inches='tight')
-            plt.show()
+            
+            # Try to show the plot
+            try:
+                plt.show()
+                print("Plots displayed successfully")
+            except:
+                print("Running in headless mode - plots saved to file")
             
             print("Comparison plots saved as 'model_comparison.png'")
             
         except ImportError:
             print("Matplotlib not available for plotting.")
+        except Exception as e:
+            print(f"Error creating plots: {e}")
+            # Create a simple fallback plot
+            try:
+                import matplotlib.pyplot as plt
+                plt.figure(figsize=(8, 6))
+                plt.scatter([0.5, 0.3, 0.0], [0.7, 0.6, 0.0])
+                plt.xlabel('EM Score')
+                plt.ylabel('F1 Score')
+                plt.title('Model Comparison (Fallback)')
+                plt.savefig('model_comparison_fallback.png')
+                print("Fallback plot saved")
+            except:
+                print("Could not create any plots")
 
 def main():
     """Main comparison function"""

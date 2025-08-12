@@ -5,7 +5,7 @@
       "exact_match": 0.5,
       "f1_score": 0.7137681159420289,
       "avg_confidence": 0.6333333333333334,
-      "avg_inference_time": 0.0008364518483479818,
+      "avg_inference_time": 0.0011639595031738281,
       "total_questions": 6
     },
     "detailed_results": [
@@ -17,7 +17,7 @@
         "exact_match": 1.0,
         "f1_score": 1.0,
         "confidence": 0.9,
-        "inference_time": 0.0030264854431152344
+        "inference_time": 0.005984783172607422
       },
       {
         "id": "amazon_002",
@@ -27,7 +27,7 @@
         "exact_match": 1.0,
         "f1_score": 1.0,
         "confidence": 0.9,
-        "inference_time": 0.000995635986328125
+        "inference_time": 0.0009989738464355469
       },
       {
         "id": "amazon_003",
@@ -67,7 +67,7 @@
         "exact_match": 0.0,
         "f1_score": 0.782608695652174,
         "confidence": 0.2,
-        "inference_time": 0.0009965896606445312
+        "inference_time": 0.0
       }
     ]
   },
@@ -77,7 +77,7 @@
       "exact_match": 0.5,
       "f1_score": 0.611111111111111,
       "avg_confidence": 0.8000000000000002,
-      "avg_inference_time": 0.0003380775451660156,
+      "avg_inference_time": 0.00016077359517415365,
       "total_questions": 6
     },
     "detailed_results": [
@@ -89,7 +89,7 @@
         "exact_match": 1.0,
         "f1_score": 1.0,
         "confidence": 0.8,
-        "inference_time": 0.0009999275207519531
+        "inference_time": 0.0
       },
       {
         "id": "amazon_002",
@@ -109,7 +109,7 @@
         "exact_match": 1.0,
         "f1_score": 1.0,
         "confidence": 0.8,
-        "inference_time": 0.0010285377502441406
+        "inference_time": 0.0
       },
       {
         "id": "amazon_004",
@@ -129,7 +129,7 @@
         "exact_match": 1.0,
         "f1_score": 1.0,
         "confidence": 0.8,
-        "inference_time": 0.0
+        "inference_time": 0.0009646415710449219
       },
       {
         "id": "ai_002",
@@ -149,7 +149,7 @@
       "exact_match": 0.5,
       "f1_score": 0.5833333333333334,
       "avg_confidence": 0.6,
-      "avg_inference_time": 0.00033847490946451825,
+      "avg_inference_time": 0.00033434232076009113,
       "total_questions": 6
     },
     "detailed_results": [
@@ -171,7 +171,7 @@
         "exact_match": 1.0,
         "f1_score": 1.0,
         "confidence": 0.9,
-        "inference_time": 0.00016117095947265625
+        "inference_time": 0.0
       },
       {
         "id": "amazon_003",
@@ -181,7 +181,7 @@
         "exact_match": 1.0,
         "f1_score": 1.0,
         "confidence": 0.9,
-        "inference_time": 0.0008380413055419922
+        "inference_time": 0.0010037422180175781
       },
       {
         "id": "amazon_004",
@@ -191,7 +191,7 @@
         "exact_match": 0.0,
         "f1_score": 0.5,
         "confidence": 0.9,
-        "inference_time": 0.001031637191772461
+        "inference_time": 0.0
       },
       {
         "id": "ai_001",
@@ -201,7 +201,7 @@
         "exact_match": 0.0,
         "f1_score": 0.0,
         "confidence": 0.0,
-        "inference_time": 0.0
+        "inference_time": 0.0010023117065429688
       },
       {
         "id": "ai_002",
@@ -221,7 +221,7 @@
       "exact_match": 0.0,
       "f1_score": 0.0,
       "avg_confidence": 0.0,
-      "avg_inference_time": 0.0006633202234903971,
+      "avg_inference_time": 5.078315734863281e-05,
       "total_questions": 6
     },
     "detailed_results": [
@@ -229,47 +229,47 @@
         "id": "amazon_001",
         "question": "What percentage of the Amazon rainforest is in Brazil?",
         "expected": "60%",
-        "predicted": "[Requires internet - distilbert-base-cased-distilbert-squad]",
+        "predicted": "[Offline - distilbert-base-cased-distilbert-squad unavailable]",
         "exact_match": 0.0,
         "f1_score": 0.0,
         "confidence": 0.0,
-        "inference_time": 0.0010035037994384766
+        "inference_time": 0.0
       },
       {
         "id": "amazon_002",
         "question": "How many square kilometers does the Amazon basin cover?",
         "expected": "7,000,000 km2",
-        "predicted": "[Requires internet - distilbert-base-cased-distilbert-squad]",
+        "predicted": "[Offline - distilbert-base-cased-distilbert-squad unavailable]",
         "exact_match": 0.0,
         "f1_score": 0.0,
         "confidence": 0.0,
-        "inference_time": 0.0009765625
+        "inference_time": 0.0
       },
       {
         "id": "amazon_003",
         "question": "Which country has the second largest portion of the rainforest?",
         "expected": "Peru",
-        "predicted": "[Requires internet - distilbert-base-cased-distilbert-squad]",
+        "predicted": "[Offline - distilbert-base-cased-distilbert-squad unavailable]",
         "exact_match": 0.0,
         "f1_score": 0.0,
         "confidence": 0.0,
-        "inference_time": 0.00099945068359375
+        "inference_time": 0.0
       },
       {
         "id": "amazon_004",
         "question": "How many nations have territory in the Amazon region?",
         "expected": "nine nations",
-        "predicted": "[Requires internet - distilbert-base-cased-distilbert-squad]",
+        "predicted": "[Offline - distilbert-base-cased-distilbert-squad unavailable]",
         "exact_match": 0.0,
         "f1_score": 0.0,
         "confidence": 0.0,
-        "inference_time": 0.0010004043579101562
+        "inference_time": 0.0
       },
       {
         "id": "ai_001",
         "question": "What does AI stand for?",
         "expected": "Artificial intelligence",
-        "predicted": "[Requires internet - distilbert-base-cased-distilbert-squad]",
+        "predicted": "[Offline - distilbert-base-cased-distilbert-squad unavailable]",
         "exact_match": 0.0,
         "f1_score": 0.0,
         "confidence": 0.0,
@@ -279,11 +279,11 @@
         "id": "ai_002",
         "question": "What are intelligent agents?",
         "expected": "any device that perceives its environment and takes actions that maximize its chance of successfully achieving its goals",
-        "predicted": "[Requires internet - distilbert-base-cased-distilbert-squad]",
+        "predicted": "[Offline - distilbert-base-cased-distilbert-squad unavailable]",
         "exact_match": 0.0,
         "f1_score": 0.0,
         "confidence": 0.0,
-        "inference_time": 0.0
+        "inference_time": 0.0003046989440917969
       }
     ]
   },
@@ -293,7 +293,7 @@
       "exact_match": 0.0,
       "f1_score": 0.0,
       "avg_confidence": 0.0,
-      "avg_inference_time": 0.0004520018895467122,
+      "avg_inference_time": 0.0,
       "total_questions": 6
     },
     "detailed_results": [
@@ -301,7 +301,7 @@
         "id": "amazon_001",
         "question": "What percentage of the Amazon rainforest is in Brazil?",
         "expected": "60%",
-        "predicted": "[Requires internet - bert-base-uncased]",
+        "predicted": "[Offline - bert-base-uncased unavailable]",
         "exact_match": 0.0,
         "f1_score": 0.0,
         "confidence": 0.0,
@@ -311,7 +311,7 @@
         "id": "amazon_002",
         "question": "How many square kilometers does the Amazon basin cover?",
         "expected": "7,000,000 km2",
-        "predicted": "[Requires internet - bert-base-uncased]",
+        "predicted": "[Offline - bert-base-uncased unavailable]",
         "exact_match": 0.0,
         "f1_score": 0.0,
         "confidence": 0.0,
@@ -321,7 +321,7 @@
         "id": "amazon_003",
         "question": "Which country has the second largest portion of the rainforest?",
         "expected": "Peru",
-        "predicted": "[Requires internet - bert-base-uncased]",
+        "predicted": "[Offline - bert-base-uncased unavailable]",
         "exact_match": 0.0,
         "f1_score": 0.0,
         "confidence": 0.0,
@@ -331,31 +331,31 @@
         "id": "amazon_004",
         "question": "How many nations have territory in the Amazon region?",
         "expected": "nine nations",
-        "predicted": "[Requires internet - bert-base-uncased]",
+        "predicted": "[Offline - bert-base-uncased unavailable]",
         "exact_match": 0.0,
         "f1_score": 0.0,
         "confidence": 0.0,
-        "inference_time": 0.0009980201721191406
+        "inference_time": 0.0
       },
       {
         "id": "ai_001",
         "question": "What does AI stand for?",
         "expected": "Artificial intelligence",
-        "predicted": "[Requires internet - bert-base-uncased]",
+        "predicted": "[Offline - bert-base-uncased unavailable]",
         "exact_match": 0.0,
         "f1_score": 0.0,
         "confidence": 0.0,
-        "inference_time": 0.0007169246673583984
+        "inference_time": 0.0
       },
       {
         "id": "ai_002",
         "question": "What are intelligent agents?",
         "expected": "any device that perceives its environment and takes actions that maximize its chance of successfully achieving its goals",
-        "predicted": "[Requires internet - bert-base-uncased]",
+        "predicted": "[Offline - bert-base-uncased unavailable]",
         "exact_match": 0.0,
         "f1_score": 0.0,
         "confidence": 0.0,
-        "inference_time": 0.0009970664978027344
+        "inference_time": 0.0
       }
     ]
   },
@@ -365,7 +365,7 @@
       "exact_match": 0.0,
       "f1_score": 0.0,
       "avg_confidence": 0.0,
-      "avg_inference_time": 0.000750422477722168,
+      "avg_inference_time": 0.0,
       "total_questions": 6
     },
     "detailed_results": [
@@ -373,17 +373,17 @@
         "id": "amazon_001",
         "question": "What percentage of the Amazon rainforest is in Brazil?",
         "expected": "60%",
-        "predicted": "[Requires internet - roberta-base]",
+        "predicted": "[Offline - roberta-base unavailable]",
         "exact_match": 0.0,
         "f1_score": 0.0,
         "confidence": 0.0,
-        "inference_time": 0.0009999275207519531
+        "inference_time": 0.0
       },
       {
         "id": "amazon_002",
         "question": "How many square kilometers does the Amazon basin cover?",
         "expected": "7,000,000 km2",
-        "predicted": "[Requires internet - roberta-base]",
+        "predicted": "[Offline - roberta-base unavailable]",
         "exact_match": 0.0,
         "f1_score": 0.0,
         "confidence": 0.0,
@@ -393,41 +393,41 @@
         "id": "amazon_003",
         "question": "Which country has the second largest portion of the rainforest?",
         "expected": "Peru",
-        "predicted": "[Requires internet - roberta-base]",
+        "predicted": "[Offline - roberta-base unavailable]",
         "exact_match": 0.0,
         "f1_score": 0.0,
         "confidence": 0.0,
-        "inference_time": 0.0010302066802978516
+        "inference_time": 0.0
       },
       {
         "id": "amazon_004",
         "question": "How many nations have territory in the Amazon region?",
         "expected": "nine nations",
-        "predicted": "[Requires internet - roberta-base]",
+        "predicted": "[Offline - roberta-base unavailable]",
         "exact_match": 0.0,
         "f1_score": 0.0,
         "confidence": 0.0,
-        "inference_time": 0.0010020732879638672
+        "inference_time": 0.0
       },
       {
         "id": "ai_001",
         "question": "What does AI stand for?",
         "expected": "Artificial intelligence",
-        "predicted": "[Requires internet - roberta-base]",
+        "predicted": "[Offline - roberta-base unavailable]",
         "exact_match": 0.0,
         "f1_score": 0.0,
         "confidence": 0.0,
-        "inference_time": 0.0009598731994628906
+        "inference_time": 0.0
       },
       {
         "id": "ai_002",
         "question": "What are intelligent agents?",
         "expected": "any device that perceives its environment and takes actions that maximize its chance of successfully achieving its goals",
-        "predicted": "[Requires internet - roberta-base]",
+        "predicted": "[Offline - roberta-base unavailable]",
         "exact_match": 0.0,
         "f1_score": 0.0,
         "confidence": 0.0,
-        "inference_time": 0.0005104541778564453
+        "inference_time": 0.0
       }
     ]
   },
@@ -437,7 +437,7 @@
       "exact_match": 0.0,
       "f1_score": 0.0,
       "avg_confidence": 0.0,
-      "avg_inference_time": 0.0006699164708455404,
+      "avg_inference_time": 0.0,
       "total_questions": 6
     },
     "detailed_results": [
@@ -445,17 +445,17 @@
         "id": "amazon_001",
         "question": "What percentage of the Amazon rainforest is in Brazil?",
         "expected": "60%",
-        "predicted": "[Requires internet - albert-base-v2]",
+        "predicted": "[Offline - albert-base-v2 unavailable]",
         "exact_match": 0.0,
         "f1_score": 0.0,
         "confidence": 0.0,
-        "inference_time": 0.0010020732879638672
+        "inference_time": 0.0
       },
       {
         "id": "amazon_002",
         "question": "How many square kilometers does the Amazon basin cover?",
         "expected": "7,000,000 km2",
-        "predicted": "[Requires internet - albert-base-v2]",
+        "predicted": "[Offline - albert-base-v2 unavailable]",
         "exact_match": 0.0,
         "f1_score": 0.0,
         "confidence": 0.0,
@@ -465,7 +465,7 @@
         "id": "amazon_003",
         "question": "Which country has the second largest portion of the rainforest?",
         "expected": "Peru",
-        "predicted": "[Requires internet - albert-base-v2]",
+        "predicted": "[Offline - albert-base-v2 unavailable]",
         "exact_match": 0.0,
         "f1_score": 0.0,
         "confidence": 0.0,
@@ -475,31 +475,31 @@
         "id": "amazon_004",
         "question": "How many nations have territory in the Amazon region?",
         "expected": "nine nations",
-        "predicted": "[Requires internet - albert-base-v2]",
+        "predicted": "[Offline - albert-base-v2 unavailable]",
         "exact_match": 0.0,
         "f1_score": 0.0,
         "confidence": 0.0,
-        "inference_time": 0.001104116439819336
+        "inference_time": 0.0
       },
       {
         "id": "ai_001",
         "question": "What does AI stand for?",
         "expected": "Artificial intelligence",
-        "predicted": "[Requires internet - albert-base-v2]",
+        "predicted": "[Offline - albert-base-v2 unavailable]",
         "exact_match": 0.0,
         "f1_score": 0.0,
         "confidence": 0.0,
-        "inference_time": 0.0008995532989501953
+        "inference_time": 0.0
       },
       {
         "id": "ai_002",
         "question": "What are intelligent agents?",
         "expected": "any device that perceives its environment and takes actions that maximize its chance of successfully achieving its goals",
-        "predicted": "[Requires internet - albert-base-v2]",
+        "predicted": "[Offline - albert-base-v2 unavailable]",
         "exact_match": 0.0,
         "f1_score": 0.0,
         "confidence": 0.0,
-        "inference_time": 0.0010137557983398438
+        "inference_time": 0.0
       }
     ]
   }
