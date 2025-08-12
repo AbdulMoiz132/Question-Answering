@@ -181,6 +181,12 @@ def evaluate_qa_system(qa_function, test_data: pd.DataFrame) -> Dict:
     results = evaluate_predictions(predictions, ground_truths)
     return results
 
+def evaluate_model(qa_function, test_data: pd.DataFrame) -> Dict:
+    """
+    Alias for evaluate_qa_system for backward compatibility
+    """
+    return evaluate_qa_system(qa_function, test_data)
+
 def print_evaluation_results(results: Dict):
     """
     Print evaluation results in a nice format

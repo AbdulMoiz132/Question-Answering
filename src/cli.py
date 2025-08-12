@@ -13,6 +13,41 @@ from data_loader import load_data
 from evaluator import evaluate_qa_system, print_evaluation_results
 import pandas as pd
 
+class QuestionAnsweringCLI:
+    """
+    Question Answering CLI wrapper class
+    """
+    
+    def __init__(self):
+        """Initialize the CLI with QA manager"""
+        self.qa_manager = create_enhanced_qa_system()
+    
+    def answer_question(self, question: str, context: str) -> str:
+        """
+        Answer a single question with given context
+        
+        Args:
+            question (str): The question to answer
+            context (str): The context to use
+            
+        Returns:
+            str: The answer
+        """
+        try:
+            result = self.qa_manager.predict(context, question)
+            if isinstance(result, dict):
+                return result.get('answer', 'No answer found')
+            return str(result)
+        except Exception as e:
+            return f"Error: {e}"
+    
+    def get_model_info(self):
+        """Get information about the current model"""
+        try:
+            return self.qa_manager.get_model_info()
+        except:
+            return {"model": "rule-based", "status": "active"}
+
 def interactive_qa_session(qa_manager):
     """
     Run an interactive QA session
